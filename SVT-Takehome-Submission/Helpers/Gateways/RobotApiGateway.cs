@@ -12,8 +12,7 @@ namespace SVT_Takehome_Submission.Helpers.Gateways
         public static List<Robot> Robots()
         {
             HttpResponseMessage response = Get("robots");
-            List<Robot> robots = null;
-            robots = response.Content.ReadAsAsync<List<Robot>>().Result;
+            List<Robot> robots = response.Content.ReadAsAsync<List<Robot>>().Result;
 
             return robots;
         }
