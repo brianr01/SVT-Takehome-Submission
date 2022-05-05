@@ -5,5 +5,9 @@
     <RootNamespace>SVT_Takehome_Submission</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 
 </Project>
