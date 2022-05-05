@@ -41,7 +41,7 @@ namespace SVT_Takehome_Submission.Controllers
                     continue;
                 }
 
-                if (!hasFoundCloseRobot && distance < closestDistance || optimalRobot is null)
+                if ((!hasFoundCloseRobot && distance < closestDistance) || optimalRobot is null)
                 {
                     optimalRobot = robot;
                     closestDistance = distance;
