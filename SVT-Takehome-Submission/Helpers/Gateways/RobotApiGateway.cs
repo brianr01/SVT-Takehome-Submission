@@ -9,6 +9,10 @@ namespace SVT_Takehome_Submission.Helpers.Gateways
 {
     public class RobotApiGateway
     {
+        /// <summary>
+        /// Gets the list of robots from the robot api.
+        /// </summary>
+        /// <returns>A list of the robot model.</returns>
         public static List<Robot> Robots()
         {
             HttpResponseMessage response = Get("robots");
@@ -17,6 +21,10 @@ namespace SVT_Takehome_Submission.Helpers.Gateways
             return robots;
         }
 
+        /// <summary>
+        /// Makes a get request to the robots api.
+        /// </summary>
+        /// <returns>The http response message.</returns>
         private static HttpResponseMessage Get(string path)
         {
             HttpClient client = new HttpClient();
