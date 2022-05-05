@@ -9,16 +9,16 @@ namespace SVT_Takehome_Submission.Helpers.Gateways
 {
     public class RobotApiGateway
     {
-        public List<Robot> robots()
+        public List<Robot> Robots()
         {
-            HttpResponseMessage response = get("robots");
+            HttpResponseMessage response = Get("robots");
             List<Robot> robots = null;
             robots = response.Content.ReadAsAsync<List<Robot>>().Result;
 
             return robots;
         }
 
-        private HttpResponseMessage get(string path)
+        private HttpResponseMessage Get(string path)
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = client.GetAsync("https://60c8ed887dafc90017ffbd56.mockapi.io/" + path).Result;
