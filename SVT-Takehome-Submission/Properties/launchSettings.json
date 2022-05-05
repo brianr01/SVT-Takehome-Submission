@@ -14,7 +14,8 @@
       "launchBrowser": true,
       "launchUrl": "",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ROBOT_API_URL": "https://60c8ed887dafc90017ffbd56.mockapi.io/"
       }
     },
     "SVT_Takehome_Submission": {
@@ -22,7 +23,8 @@
       "launchBrowser": true,
       "launchUrl": "",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ROBOT_API_URL": "https://60c8ed887dafc90017ffbd56.mockapi.io/"
       },
       "applicationUrl": "http://localhost:5000"
     }
