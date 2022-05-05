@@ -36,8 +36,6 @@ namespace SVT_Takehome_Submission
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseAuthorization();
