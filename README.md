@@ -1,8 +1,11 @@
 # SVT-Takehome-Submission
 ## Running
 Clone the repository.
-$ git clone git@github.com:brianr01/SVT-Takehome-Submission.git
-Open the repository in VS2019, and build the solution.
+`$ git clone git@github.com:brianr01/SVT-Takehome-Submission.git`
+1. Open the repository in Visual Studio 2019.
+2. Switch to the `Release` configuration.
+3. Switch to the `SVT_Takehome_Submission` profile.
+4. Run the solution.
 ## Testing
 Base Url: `http://localhost:5000/api/`
 ### Endpoints
@@ -26,3 +29,7 @@ Example Response
 ```
 
 ## What is next?
+* Use a map of the environment.
+* Add error handling.
+* Deploy to Azure.
+* Move "GetDistance" method its own math package.
