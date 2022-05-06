@@ -1,17 +1,18 @@
 # SVT-Takehome-Submission
 ## Running
 ### Run With .exe
-
-Clone the repository.
+1. Clone the repository.
 `$ git clone git@github.com:brianr01/SVT-Takehome-Submission.git`
+2. Navigate to the `Publish` directory within the cloned repository.
+3. Run the executable.
 
 ### Run With Visual Studio 2019
-Clone the repository.
+1. Clone the repository.
 `$ git clone git@github.com:brianr01/SVT-Takehome-Submission.git`
-1. Open the repository in Visual Studio 2019.
-2. Switch to the `Release` configuration.
-3. Switch to the `SVT_Takehome_Submission` profile.
-4. Run the solution.
+2. Open the repository in Visual Studio 2019.
+3. Switch to the `Release` configuration.
+4. Switch to the `SVT_Takehome_Submission` profile.
+5. Run the solution.
 ## Testing
 Base Url: `http://localhost:5000/api/`
 ### Endpoints
