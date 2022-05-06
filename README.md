@@ -3,7 +3,7 @@
 ### Run With .exe
 1. Clone the repository.
 `$ git clone git@github.com:brianr01/SVT-Takehome-Submission.git`
-2. Navigate to the `Publish` directory within the cloned repository.
+2. Navigate to the `SVT-Takehome-Submission/Publish` directory within the cloned repository.
 3. Run the executable.
 
 ### Run With Visual Studio 2019
