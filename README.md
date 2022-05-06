@@ -29,11 +29,12 @@ Example Response
 ```
 
 ## What is next?
+
 ### Use a map of the environment.
 While the closest distance between two points is a line, it would be a big problem is a self was between the robot and the payload.
 #### Node Map
 Given a map of the enivonment, a set of connected nodes can be generated to reduce the complexcity of the problem.
-### A*
+#### A*
 Given the set of connected nodes, a path search algorithm (a* for example) can be implemented to get a better approximation for the navigation distance of a robot. 
 ### Add error handling.
 Implementing proper error handling is important.
