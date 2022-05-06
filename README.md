@@ -51,7 +51,7 @@ For example: If a point returned a distance of 11 units in the x direction and 1
 Given a robot is purely in the x or y direction, it is quite easy to tell the distance.
 For example: (0, 10) or (100, 0)
 It gets more difficult to estimate as the ratio between x and y changes. When x = y the distance away from its perceived value is at its peak. The value of x + y given x = y can be calculated at given the distance. (Note: This optimization will only help if some of the points are outside the set distance.)
-### Calculating the approximation.
+#### Calculating the approximation.
 From the previous example x and y were used for the distance between two points in the x and y directions.  For the calculation, a and b will be used instead of x and y.
 ```
 Given a = b calculate the value of a + b.
@@ -64,7 +64,7 @@ sqrt(c^2) / sqrt(2) = a
 c/sqrt(2) = a
 c/sqrt(2) * 2 = a + b
 ```
-### Usage
+#### Usage
 A pseudo code example.
 ```
 c = 10; // The distance is 10 units.
@@ -76,5 +76,8 @@ for point in points {
     // Calculate the true distance with the distance formula.
 }
 ```
+
+### Unit Tests
+---
 
 
