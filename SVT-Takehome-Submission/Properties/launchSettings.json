@@ -22,7 +22,7 @@
       "commandName": "Project",
       "launchUrl": "",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production",
+        "ASPNETCORE_ENVIRONMENT": "Development",
         "ROBOT_API_URL": "https://60c8ed887dafc90017ffbd56.mockapi.io/"
       },
       "applicationUrl": "http://localhost:5000"
