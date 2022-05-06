@@ -1,5 +1,11 @@
 # SVT-Takehome-Submission
 ## Running
+### Run With .exe
+
+Clone the repository.
+`$ git clone git@github.com:brianr01/SVT-Takehome-Submission.git`
+
+### Run With Visual Studio 2019
 Clone the repository.
 `$ git clone git@github.com:brianr01/SVT-Takehome-Submission.git`
 1. Open the repository in Visual Studio 2019.
@@ -10,7 +16,7 @@ Clone the repository.
 Base Url: `http://localhost:5000/api/`
 ### Endpoints
 ### Robots Closest
-Path: `robots/closest` <br>
+Path: `robots/closest` (Post) <br>
 Example Payload
 ```
 {
