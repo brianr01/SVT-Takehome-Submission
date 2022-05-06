@@ -29,37 +29,55 @@ namespace SVT_Takehome_Submission.Controllers
 
             List<Robot> robots = RobotApiGateway.Robots();
 
-            bool hasFoundCloseRobot = false;
 
-            Robot optimalRobot = null;
-            double? closestDistance = null;
+            // Select the first robot as the default.
+            Robot optimalRobot = robots.First();
+            double distanceForOptimalRobot = GetDistance(optimalRobot.x, optimalRobot.y, load.x, load.y);
+            bool hasFoundNearbyRobot = distanceForOptimalRobot < shortDistance;
 
-            foreach(var robot in robots)
+
+            foreach (var robot in robots.Skip(1))
             {
                 double distance = GetDistance(robot.x, robot.y, load.x, load.y);
 
+                // If the robot is nearby.
                 if (distance < shortDistance)
                 {
-                    hasFoundCloseRobot = true;
+                    // If a nearby robot has not been found already.
+                    if (!hasFoundNearbyRobot)
+                    {
+                        optimalRobot = robot;
+                        distanceForOptimalRobot = distance;
+                        hasFoundNearbyRobot = true;
+                        continue;   
+                    }
+
+                    // Compare the battery with the other robot that has been found nearby
                     if (optimalRobot.batteryLevel < robot.batteryLevel)
                     {
                         optimalRobot = robot;
-                        closestDistance = distance;
+                        distanceForOptimalRobot = distance;
                     }
+                }
+
+                // Don't check robots that are far away if a close one has already been found.
+                if (hasFoundNearbyRobot)
+                {
                     continue;
                 }
 
-                if ((!hasFoundCloseRobot && distance < closestDistance) || optimalRobot is null)
+                // If the robot is closer than the current optimal robot.
+                if (distance < distanceForOptimalRobot)
                 {
                     optimalRobot = robot;
-                    closestDistance = distance;
+                    distanceForOptimalRobot = distance;
                 }
             }
 
             OptimalRobotReturn robotReturn = new OptimalRobotReturn
             {
                 robotId = Convert.ToInt32(optimalRobot.robotId),
-                distanceToGoal = closestDistance,
+                distanceToGoal = distanceForOptimalRobot,
                 batteryLevel = optimalRobot.batteryLevel
             };
 
