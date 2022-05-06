@@ -9,6 +9,7 @@ namespace SVT_Takehome_Submission.Helpers.Gateways
 {
     public class RobotApiGateway
     {
+        private static readonly string robotApiUrl = "https://60c8ed887dafc90017ffbd56.mockapi.io/";
         /// <summary>
         /// Gets the list of robots from the robot api.
         /// </summary>
@@ -28,7 +29,7 @@ namespace SVT_Takehome_Submission.Helpers.Gateways
         private static HttpResponseMessage Get(string path)
         {
             HttpClient client = new HttpClient();
-            HttpResponseMessage response = client.GetAsync(Environment.GetEnvironmentVariable("ROBOT_API_URL") + path).Result;
+            HttpResponseMessage response = client.GetAsync(robotApiUrl + path).Result;
 
             return response;
         }
